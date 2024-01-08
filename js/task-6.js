@@ -41,22 +41,37 @@ function getRandomHexColor() {
         .toString(16)
         .padStart(6, 0)}`;
 }
-const allForm = document.querySelector('#controls');
-const inputForm = document.querySelector('#controls input');
-const createBtn = document.querySelector('[data-create');
-const destroyBtn = document.querySelector('[data-destroy]');
-const boxesForm = document.querySelector('#boxes');
-// createBoxes(amount);
-createBtn.addEventListener('click', function () {
-    const amount = Number(input.value);
-    if (amount >= 1 && amount <= 100) {
-        createBoxes(amount);
-        input.value = '';
+
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.querySelector('input');
+    const createBtn = document.querySelector('[data-create]');
+    const destroyBtn = document.querySelector('[data-destroy]');
+    const boxesContainer = document.querySelector('#boxes');
+
+    createBtn.addEventListener('click', function () {
+        const amount = +input.value;
+
+        if (amount >= 1 && amount <= 100) {
+            createBoxes(amount);
+            input.value = '';
+        }
+    });
+
+    destroyBtn.addEventListener('click', function () {
+        boxesContainer.innerHTML = '';
+    });
+
+    function createBoxes(amount) {
+        boxesContainer.innerHTML = '';
+        let size = 30;
+
+        for (let i = 0; i < amount; i++) {
+            const box = document.createElement('div');
+            box.style.width = `${size}px`;
+            box.style.height = `${size}px`;
+            box.style.backgroundColor = getRandomHexColor();
+            boxesContainer.appendChild(box);
+            size += 10;
+        }
     }
 });
-destroyBtn.addEventListener('click', destroyBoxes);
-// destroyBoxes();
-function destroyBoxes() {
-    boxesForm.innerHTML = '';
-}
-boxesForm.addEventListener('click', function () {});

@@ -12,6 +12,7 @@ body {
     color: #212121;
     line-height: 1.5;
 }
+
 .back {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -26,11 +27,13 @@ body {
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .gallery-image {
     margin-right: 24px;
     margin-bottom: 48px;
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.407);
 }
+
 /* ------------------2-------------------------- */
 .list-item {
     list-style-type: none;
@@ -40,9 +43,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #2e2f42;
 }
-.list-item > h2 {
+
+.list-item>h2 {
     margin-bottom: 16px;
 }
+
 .item {
     list-style-type: none;
     font-size: 16px;
@@ -51,7 +56,8 @@ body {
     padding-left: 0;
     color: #2e2f42;
 }
-.item > li {
+
+.item>li {
     border: 1px solid #808080;
     width: 360px;
     height: 40px;
@@ -69,17 +75,20 @@ body {
     margin-bottom: 20px;
     padding: 0 15px;
 }
+
 /* --------------------3-------------------------- */
 #name-input {
     width: 360px;
     height: 40px;
 }
+
 /* -------------------4------------------------ */
 .login-form {
     width: 408px;
     height: 256px;
     margin: 0 auto;
 }
+
 .input-password {
     margin-bottom: 16px;
     font-size: 16px;
@@ -90,6 +99,7 @@ body {
     border-color: #808080;
     box-shadow: none;
 }
+
 .input-email {
     display: flex;
     font-size: 16px;
@@ -98,6 +108,7 @@ body {
     height: 40px;
     border-radius: 5px;
 }
+
 .login-btn {
     background-color: #4e75ff;
     width: 86px;
@@ -107,6 +118,7 @@ body {
     border-color: #fafafa;
     border-style: none;
 }
+
 /* ----------------------------5------------------------- */
 .change-color {
     width: 148px;
@@ -128,8 +140,50 @@ body {
     flex-wrap: wrap;
     align-content: space-around;
 }
+
 .color {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+}
+
+/* ---------------------6-------------------- */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: #fafafa;
+    background-color: #4e75ff;
+    color: #fafafa;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 16px;
+
+}
+
+.destroy {
+    background-color: #FF4E4E;
+}
+
+.controls-input {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    padding: 0;
+    margin-right: 16px;
+}
+
+#boxes {
+    display: flex;
+    margin-right: 16px;
+    margin-top: 48px;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
