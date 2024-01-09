@@ -22,7 +22,6 @@ function onFormInput(event) {
             password: password,
         };
         console.log(formData);
+        loginForm.reset();
     }
-    loginForm.reset();
 }
-document.body.style.display = '';

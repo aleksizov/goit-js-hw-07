@@ -20,6 +20,5 @@ const output = document.querySelector('#name-output');
 input.addEventListener('input', onInputForm);
 function onInputForm(event) {
     const inputValue = event.target.value.trim();
-    output.textContent = inputValue === '' ? 'Anonymus' : inputValue;
+    output.textContent = inputValue === '' ? 'Anonymous' : inputValue;
 }
-console.log(input.value);
