@@ -25,19 +25,14 @@ const images = [
     },
 ];
 
-const galleryAll = document.querySelector('.js-gallery');
-const markup = images.map(itemCards).join('\n\n');
-galleryAll.innerHTML = markup;
-
-function itemCards(obj) {
-    const url = obj.url;
-    const alt = obj.alt;
-
-    return `
-    
-      <li class = "gallery-image">
-      <img src="${url}" alt="${alt}" width="360" height="300" />
-      </li>
-      
-    `;
+const imgListElem = document.querySelector('.gallery');
+function imageTemplate(image) {
+    return `<li class="js-item">
+        <img class="js-gallery-img" src="${image.url}"alt="${image.alt} "width="360" height="300">
+    </li>`;
 }
+function galleryImg() {
+    const markup = images.map(imageTemplate).join('');
+    imgListElem.insertAdjacentHTML('beforeend', markup);
+}
+galleryImg();
